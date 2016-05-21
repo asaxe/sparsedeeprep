@@ -60,7 +60,8 @@ for c = 10.^[1]
 
             [~, res, ~] = svmpredict_inplace(tst_lab, ktst, svmtrain_inplace(trn_lab, ktrn, sprintf('-t 4 -c %d -q', c)));
             
-            if res(1) >= acc && acc ~= 1, acc = res(1); else break; end % auto stop
+            if res(1) > acc, acc = res(1); else break; end % auto stop
+
         end
         
         fprintf('\n');
