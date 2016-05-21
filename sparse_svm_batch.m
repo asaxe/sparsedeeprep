@@ -8,7 +8,7 @@ for Nepochs = [10 100 200]
 
     Ns = 50; % Input dimension
     P = 50; % Number of centroids
-    fprintf('Num examples = %d',P*Nepochs) % = 10; % Number of epochs of training data to generate for overall batch. Total # of training samples in batch is P*Nepochs
+    fprintf('Num examples = %d\n\n',P*Nepochs) % = 10; % Number of epochs of training data to generate for overall batch. Total # of training samples in batch is P*Nepochs
     Nepochs_test = 500;
     dS = .05; % Probability of noise corruption
     Ncs = [1000]; % Number of random hidden layer filters
