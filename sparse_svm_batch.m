@@ -45,7 +45,7 @@ name = {'SSReLU', 'TSReLU'};
 
 for c = 10.^[1]
     
-    for f = [1 2] %{tsrelu, ssrelu}
+    for f = [2 1] %{tsrelu, ssrelu}
 
         ktrn = zeros(size(trn,2)+1, size(trn,2), 'single'); ktrn(1,:) = 1:size(trn,2);
         ktst = zeros(size(trn,2)+1, size(tst,2), 'single'); ktst(1,:) = 1:size(tst,2);
