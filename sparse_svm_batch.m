@@ -14,13 +14,13 @@ for Nepochs = [10 100 200]
     Ncs = [1000]; % Number of random hidden layer filters
 
     c = rand(Ns,P)>.5; % Centroid locations
-    y = 2*((rand(1,P)>.5)-1/2); % Centroid labels
+    yl = 2*((rand(1,P)>.5)-1/2); % Centroid labels
 
     x = (2*(repmat(c,1,Nepochs)-1/2).*(2*((rand(Ns,P*Nepochs) >= (dS/2)) - 1/2)))/2+1/2;
-    y = repmat(y,1,Nepochs);
+    y = repmat(yl,1,Nepochs);
 
     xt = (2*(repmat(c,1,Nepochs_test)-1/2).*(2*((rand(Ns,P*Nepochs_test) >= (dS/2)) - 1/2)))/2+1/2;
-    yt = y;
+    yt = repmat(yl,1,Nepochs_test);
 
     %% Train SVM
 
