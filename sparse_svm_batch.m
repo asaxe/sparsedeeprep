@@ -51,7 +51,7 @@ for c = 10.^[1]
         ktst = zeros(size(trn,2)+1, size(tst,2), 'single'); ktst(1,:) = 1:size(tst,2);
 
         ktrn(2:end,:) = clip(trn' * trn);
-        ktst(2:end,:) = clip(trn' * tst);
+        ktst(2:end,:) = clip(tst' * tst);
 
         acc = 0;
         
