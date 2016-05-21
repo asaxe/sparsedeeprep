@@ -17,7 +17,7 @@ x = (2*(repmat(c,1,Nepochs)-1/2).*(2*((rand(Ns,P*Nepochs) >= (dS/2)) - 1/2)))/2+
 y = repmat(y,1,Nepochs);
 
 xt = (2*(repmat(c,1,Nepochs)-1/2).*(2*((rand(Ns,P*Nepochs) >= (dS/2)) - 1/2)))/2+1/2;
-yt = repmat(y,1,Nepochs);
+yt = y;
 
 %% Train SVM
 
