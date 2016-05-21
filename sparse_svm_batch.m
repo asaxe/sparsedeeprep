@@ -18,10 +18,10 @@ y = repmat(y,1,Nepochs);
 
 %% Train SVM
 
-trn = x;
+trn = single(x);
 trn_lab = y;
 
-tst = x;
+tst = single(x);
 tst_lab = y;
 
 m = mean(trn(:)); trn = trn - m; tst = tst - m;
