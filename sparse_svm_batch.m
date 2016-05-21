@@ -16,17 +16,21 @@ y = 2*((rand(1,P)>.5)-1/2); % Centroid labels
 x = (2*(repmat(c,1,Nepochs)-1/2).*(2*((rand(Ns,P*Nepochs) >= (dS/2)) - 1/2)))/2+1/2;
 y = repmat(y,1,Nepochs);
 
+xt = (2*(repmat(c,1,Nepochs)-1/2).*(2*((rand(Ns,P*Nepochs) >= (dS/2)) - 1/2)))/2+1/2;
+yt = repmat(y,1,Nepochs);
+
 %% Train SVM
 
 trn = single(x);
 trn_lab = y;
 
-tst = single(x);
-tst_lab = y;
+tst = single(xt);
+tst_lab = yt;
+
+clear x xt y yt;
 
 m = mean(trn(:)); trn = trn - m; tst = tst - m;
 
-clear tmp;
 
 trn = bsxfun(@rdivide, trn, sqrt(sum(trn.^2)));
 tst = bsxfun(@rdivide, tst, sqrt(sum(tst.^2)));
