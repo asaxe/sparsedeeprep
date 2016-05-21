@@ -51,10 +51,10 @@ for Nepochs = [10 100 200]
         for f = [2 1] %{tsrelu, ssrelu}
 
             ktrn = zeros(size(trn,2)+1, size(trn,2), 'single'); ktrn(1,:) = 1:size(trn,2);
-            ktst = zeros(size(tst,2)+1, size(tst,2), 'single'); ktst(1,:) = 1:size(tst,2);
+            ktst = zeros(size(trn,2)+1, size(tst,2), 'single'); ktst(1,:) = 1:size(tst,2);
 
             ktrn(2:end,:) = clip(trn' * trn);
-            ktst(2:end,:) = clip(tst' * tst);
+            ktst(2:end,:) = clip(trn' * tst);
 
             acc = 0;
             
