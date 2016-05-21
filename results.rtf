@@ -1,0 +1,184 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf460
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf0 \CocoaLigature0 duct information, visit www.mathworks.com.\
+ \
+\
+	Academic License\
+\
+>> cd sparse\
+No completions found.\
+>> cd sparse\
+No completions found.\
+>> ls       \
+mli.sh	mli.sh~  ml.sh\
+\
+>> cd ../sparsedeeprep/\
+>> ls\
+big_Nc.mat  compare.m  libsvm-compact-0.1  perceptron_sparse_expansion_fixed_batch.m  perceptron_sparse_expansion.m  sparse_svm_batch.m\
+\
+>> sparse_svm_batch \
+TSReLU: c=1.0e+01, l=01, Operation terminated by user during @(K)max(min(K,1),-1)\
+\
+\
+In sparse_svm_batch (line 58)\
+            ktrn(2:end,:) = clip(func\{f\}(ktrn(2:end,:)));\
+ \
+>> \
+>> sparse_svm_batch\
+TSReLU: c=1.0e+01, l=01, Accuracy = 100% (5000/5000) (classification)\
+TSReLU: c=1.0e+01, l=02, Accuracy = 100% (5000/5000) (classification)\
+\
+SSReLU: c=1.0e+01, l=01, Accuracy = 100% (5000/5000) (classification)\
+SSReLU: c=1.0e+01, l=02, Accuracy = 100% (5000/5000) (classification)\
+\
+>> sparse_svm_batch\
+TSReLU: c=1.0e+01, l=01, Accuracy = 100% (10000/10000) (classification)\
+TSReLU: c=1.0e+01, l=02, Accuracy = 100% (10000/10000) (classification)\
+TSReLU: c=1.0e+01, l=03, Accuracy = 100% (10000/10000) (classification)\
+Operation terminated by user during sparse_svm_batch (line 61)\
+\
+ \
+>> \
+>> \
+>> sparse_svm_batch\
+SSReLU: c=1.0e+01, l=01, Accuracy = 100% (25000/25000) (classification)\
+SSReLU: c=1.0e+01, l=02, Operation terminated by user during sparse_svm_batch (line 59)\
+\
+ \
+>> sparse_svm_batch\
+SSReLU: c=1.0e+01, l=01, Length of label vector does not match # of instances.\
+Attempted to access res(1); index out of bounds because numel(res)=0.\
+\
+Error in sparse_svm_batch (line 67)\
+            if res(1) > acc, acc = res(1); else break; end % auto stop\
+ \
+>> sparse_svm_batch\
+SSReLU: c=1.0e+01, l=01, Accuracy = 100% (10000/10000) (classification)\
+SSReLU: c=1.0e+01, l=02, Accuracy = 100% (10000/10000) (classification)\
+\
+TSReLU: c=1.0e+01, l=01, Accuracy = 100% (10000/10000) (classification)\
+TSReLU: c=1.0e+01, l=02, Accuracy = 100% (10000/10000) (classification)\
+\
+>> sparse_svm_batch\
+SSReLU: c=1.0e+01, l=01, Accuracy = 95.47% (9547/10000) (classification)\
+SSReLU: c=1.0e+01, l=02, Accuracy = 98.36% (9836/10000) (classification)\
+SSReLU: c=1.0e+01, l=03, Accuracy = 99.23% (9923/10000) (classification)\
+SSReLU: c=1.0e+01, l=04, Accuracy = 99.63% (9963/10000) (classification)\
+SSReLU: c=1.0e+01, l=05, Accuracy = 99.78% (9978/10000) (classification)\
+SSReLU: c=1.0e+01, l=06, Accuracy = 99.89% (9989/10000) (classification)\
+SSReLU: c=1.0e+01, l=07, Accuracy = 99.94% (9994/10000) (classification)\
+SSReLU: c=1.0e+01, l=08, Accuracy = 99.95% (9995/10000) (classification)\
+SSReLU: c=1.0e+01, l=09, Accuracy = 99.97% (9997/10000) (classification)\
+SSReLU: c=1.0e+01, l=10, Accuracy = 99.98% (9998/10000) (classification)\
+SSReLU: c=1.0e+01, l=11, Accuracy = 99.98% (9998/10000) (classification)\
+\
+TSReLU: c=1.0e+01, l=01, Accuracy = 99.32% (9932/10000) (classification)\
+TSReLU: c=1.0e+01, l=02, Accuracy = 99.98% (9998/10000) (classification)\
+TSReLU: c=1.0e+01, l=03, Accuracy = 100% (10000/10000) (classification)\
+TSReLU: c=1.0e+01, l=04, Accuracy = 100% (10000/10000) (classification)\
+\
+>> sparse_svm_batch\
+TSReLU: c=1.0e+01, l=01, Accuracy = 99.148% (24787/25000) (classification)\
+TSReLU: c=1.0e+01, l=02, Accuracy = 99.98% (24995/25000) (classification)\
+TSReLU: c=1.0e+01, l=03, Accuracy = 100% (25000/25000) (classification)\
+TSReLU: c=1.0e+01, l=04, Accuracy = 100% (25000/25000) (classification)\
+\
+SSReLU: c=1.0e+01, l=01, Accuracy = 92.668% (23167/25000) (classification)\
+SSReLU: c=1.0e+01, l=02, Accuracy = 97.224% (24306/25000) (classification)\
+SSReLU: c=1.0e+01, l=03, Accuracy = 99.176% (24794/25000) (classification)\
+SSReLU: c=1.0e+01, l=04, Operation terminated by user during @(K)(sqrt(1-K.^2)+(pi-acos(K)).*K)/pi\
+\
+\
+In sparse_svm_batch (line 63)\
+            ktst(2:end,:) = clip(func\{f\}(ktst(2:end,:)));\
+ \
+>> sparse_svm_batch\
+Num examples = 500Subscripted assignment dimension mismatch.\
+\
+Error in sparse_svm_batch (line 57)\
+            ktst(2:end,:) = clip(tst' * tst);\
+ \
+>> sparse_svm_batch\
+Num examples = 500Subscripted assignment dimension mismatch.\
+\
+Error in sparse_svm_batch (line 57)\
+            ktst(2:end,:) = clip(tst' * tst);\
+ \
+>> sparse_svm_batch\
+Num examples = 500\
+\
+TSReLU: c=1.0e+01, l=01, Accuracy = 98.024% (24506/25000) (classification)\
+TSReLU: c=1.0e+01, l=02, Accuracy = 99.912% (24978/25000) (classification)\
+TSReLU: c=1.0e+01, l=03, Accuracy = 100% (25000/25000) (classification)\
+TSReLU: c=1.0e+01, l=04, Accuracy = 100% (25000/25000) (classification)\
+\
+SSReLU: c=1.0e+01, l=01, Accuracy = 93.204% (23301/25000) (classification)\
+SSReLU: c=1.0e+01, l=02, Accuracy = 97.012% (24253/25000) (classification)\
+SSReLU: c=1.0e+01, l=03, Accuracy = 98.736% (24684/25000) (classification)\
+SSReLU: c=1.0e+01, l=04, Accuracy = 99.268% (24817/25000) (classification)\
+SSReLU: c=1.0e+01, l=05, Operation terminated by user during @(K)max(min(K,1),-1)\
+\
+\
+In sparse_svm_batch (line 66)\
+                ktst(2:end,:) = clip(func\{f\}(ktst(2:end,:)));\
+ \
+>> \
+>> sparse_svm_batch\
+Num examples = 500\
+\
+TSReLU: c=1.0e+01, l=01, Accuracy = 99.232% (24808/25000) (classification)\
+TSReLU: c=1.0e+01, l=02, Accuracy = 99.976% (24994/25000) (classification)\
+TSReLU: c=1.0e+01, l=03, Accuracy = 99.996% (24999/25000) (classification)\
+TSReLU: c=1.0e+01, l=04, Accuracy = 100% (25000/25000) (classification)\
+TSReLU: c=1.0e+01, l=05, Accuracy = 99.984% (24996/25000) (classification)\
+\
+SSReLU: c=1.0e+01, l=01, Accuracy = 94.08% (23520/25000) (classification)\
+SSReLU: c=1.0e+01, l=02, Accuracy = 98.356% (24589/25000) (classification)\
+SSReLU: c=1.0e+01, l=03, Accuracy = 99.292% (24823/25000) (classification)\
+SSReLU: c=1.0e+01, l=04, Accuracy = 99.58% (24895/25000) (classification)\
+SSReLU: c=1.0e+01, l=05, Accuracy = 99.804% (24951/25000) (classification)\
+SSReLU: c=1.0e+01, l=06, Accuracy = 99.892% (24973/25000) (classification)\
+SSReLU: c=1.0e+01, l=07, Accuracy = 99.932% (24983/25000) (classification)\
+SSReLU: c=1.0e+01, l=08, Accuracy = 99.956% (24989/25000) (classification)\
+SSReLU: c=1.0e+01, l=09, Accuracy = 99.964% (24991/25000) (classification)\
+SSReLU: c=1.0e+01, l=10, Accuracy = 99.972% (24993/25000) (classification)\
+SSReLU: c=1.0e+01, l=11, Accuracy = 99.976% (24994/25000) (classification)\
+SSReLU: c=1.0e+01, l=12, Accuracy = 99.976% (24994/25000) (classification)\
+\
+Num examples = 5000\
+\
+TSReLU: c=1.0e+01, l=01, Accuracy = 99.8% (24950/25000) (classification)\
+TSReLU: c=1.0e+01, l=02, Accuracy = 100% (25000/25000) (classification)\
+TSReLU: c=1.0e+01, l=03, Accuracy = 100% (25000/25000) (classification)\
+\
+SSReLU: c=1.0e+01, l=01, Accuracy = 96.404% (24101/25000) (classification)\
+SSReLU: c=1.0e+01, l=02, Accuracy = 99.348% (24837/25000) (classification)\
+SSReLU: c=1.0e+01, l=03, Accuracy = 99.844% (24961/25000) (classification)\
+SSReLU: c=1.0e+01, l=04, Accuracy = 99.928% (24982/25000) (classification)\
+SSReLU: c=1.0e+01, l=05, Accuracy = 99.964% (24991/25000) (classification)\
+SSReLU: c=1.0e+01, l=06, Accuracy = 99.976% (24994/25000) (classification)\
+SSReLU: c=1.0e+01, l=07, Accuracy = 99.988% (24997/25000) (classification)\
+SSReLU: c=1.0e+01, l=08, Accuracy = 99.992% (24998/25000) (classification)\
+SSReLU: c=1.0e+01, l=09, Accuracy = 100% (25000/25000) (classification)\
+SSReLU: c=1.0e+01, l=10, Accuracy = 100% (25000/25000) (classification)\
+\
+Num examples = 10000\
+\
+TSReLU: c=1.0e+01, l=01, Accuracy = 99.612% (24903/25000) (classification)\
+TSReLU: c=1.0e+01, l=02, Accuracy = 99.968% (24992/25000) (classification)\
+TSReLU: c=1.0e+01, l=03, Accuracy = 100% (25000/25000) (classification)\
+TSReLU: c=1.0e+01, l=04, Accuracy = 100% (25000/25000) (classification)\
+\
+SSReLU: c=1.0e+01, l=01, Accuracy = 97.116% (24279/25000) (classification)\
+SSReLU: c=1.0e+01, l=02, Accuracy = 99.148% (24787/25000) (classification)\
+SSReLU: c=1.0e+01, l=03, Accuracy = 99.66% (24915/25000) (classification)\
+SSReLU: c=1.0e+01, l=04, Accuracy = 99.808% (24952/25000) (classification)\
+SSReLU: c=1.0e+01, l=05, Accuracy = 99.872% (24968/25000) (classification)\
+SSReLU: c=1.0e+01, l=06, Accuracy = 99.916% (24979/25000) (classification)\
+SSReLU: c=1.0e+01, l=07, Accuracy = 99.944% (24986/25000) (classification)\
+SSReLU: c=1.0e+01, l=08, Accuracy = 99.96% (24990/25000) (classification)\
+SSReLU: c=1.0e+01, l=09, Accuracy = 99.96% (24990/25000) (classification)}
