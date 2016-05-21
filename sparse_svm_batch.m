@@ -4,13 +4,13 @@ addpath('libsvm-compact-0.1/matlab')
 
 %% Generate dataset
 
-for Nepochs = [300 400 500]
+for Nepochs = [10 100 200 500]
 
     Ns = 50; % Input dimension
     P = 50; % Number of centroids
     fprintf('Num examples = %d\n\n',P*Nepochs) % = 10; % Number of epochs of training data to generate for overall batch. Total # of training samples in batch is P*Nepochs
     Nepochs_test = 500;
-    dS = .05; % Probability of noise corruption
+    dS = .1; % Probability of noise corruption
     Ncs = [1000]; % Number of random hidden layer filters
 
     c = rand(Ns,P)>.5; % Centroid locations
