@@ -6,7 +6,7 @@ addpath('libsvm-compact-0.1/matlab')
 
 Ns = 50; % Input dimension
 P = 50; % Number of centroids
-Nepochs = 100; % Number of epochs of training data to generate for overall batch. Total # of training samples in batch is P*Nepochs
+Nepochs = 1000; % Number of epochs of training data to generate for overall batch. Total # of training samples in batch is P*Nepochs
 dS = .05; % Probability of noise corruption
 Ncs = [1000]; % Number of random hidden layer filters
 
@@ -60,7 +60,7 @@ for c = 10.^[1]
 
             [~, res, ~] = svmpredict_inplace(tst_lab, ktst, svmtrain_inplace(trn_lab, ktrn, sprintf('-t 4 -c %d -q', c)));
             
-            if res(1) >= acc || acc ==1, acc = res(1); else break; end % auto stop
+            if res(1) > acc , acc = res(1); else break; end % auto stop
         end
         
         fprintf('\n');
