@@ -5,9 +5,9 @@ alpha = 1/10000;
 %% Generate dataset
 Ns = 50; % Input dimension
 P = 50; % Number of centroids
-Nepochs = 100; % Number of epochs of training data to generate for overall batch. Total # of training samples in batch is P*Nepochs
+Nepochs = 10; % Number of epochs of training data to generate for overall batch. Total # of training samples in batch is P*Nepochs
 dS = .05; % Probability of noise corruption
-Ncs = [1000]; % Number of random hidden layer filters
+Ncs = [2000]; % Number of random hidden layer filters
 
 c = rand(Ns,P)>.5; % Centroid locations
 y = 2*((rand(1,P)>.5)-1/2); % Centroid labels
@@ -27,6 +27,7 @@ for n = 1:length(Ncs)
     h = J*x;
     s = h>0;
     
+    clear err
     for i = 1:10000
 
         i
@@ -44,8 +45,8 @@ for n = 1:length(Ncs)
 end
 %%
 hold on
-smoothed_err = conv2(err, ones(100,1)/100,'valid')
-plot(smoothed_err)
+smoothed_err = conv2(err, ones(10,1)/10,'valid')
+plot(1-smoothed_err)
 for t = 1:length(Ncs)
    leg_label{t} = num2str(Ncs(t)); 
 end

@@ -4,7 +4,7 @@ addpath('libsvm-compact-0.1/matlab')
 
 %% Generate dataset
 
-for Nepochs = [10 100 200]
+for Nepochs = [300 400 500]
 
     Ns = 50; % Input dimension
     P = 50; % Number of centroids
