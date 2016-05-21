@@ -18,6 +18,7 @@ try
 		mex -g CFLAGS="\$CFLAGS -D _DENSE_REP -D _FLOAT_REP -fopenmp -std=c99" CXXFLAGS="\$CXXFLAGS -D _DENSE_REP -D _FLOAT_REP -fopenmp" LDFLAGS="\$LDFLAGS -fopenmp" -largeArrayDims svmpredict.c ../svm.cpp svm_model_matlab.c
 		mex -g CFLAGS="\$CFLAGS -D _DENSE_REP -D _FLOAT_REP -fopenmp -std=c99" CXXFLAGS="\$CXXFLAGS -D _DENSE_REP -D _FLOAT_REP -fopenmp" LDFLAGS="\$LDFLAGS -fopenmp" -largeArrayDims svmpredict_inplace.c ../svm.cpp svm_model_matlab.c
 	end
-catch
+catch e
+	e
 	fprintf('If make.m failes, please check README about detailed instructions.\n');
 end
