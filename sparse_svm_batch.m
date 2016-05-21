@@ -6,7 +6,7 @@ addpath('libsvm-compact-0.1/matlab')
 
 Ns = 50; % Input dimension
 P = 50; % Number of centroids
-Nepochs = 200; % Number of epochs of training data to generate for overall batch. Total # of training samples in batch is P*Nepochs
+Nepochs = 500; % Number of epochs of training data to generate for overall batch. Total # of training samples in batch is P*Nepochs
 dS = .05; % Probability of noise corruption
 Ncs = [1000]; % Number of random hidden layer filters
 
@@ -41,7 +41,7 @@ name = {'SSReLU', 'TSReLU'};
 
 for c = 10.^[1]
     
-    for f = [2 1] %{tsrelu, ssrelu}
+    for f = [1 2] %{tsrelu, ssrelu}
 
         ktrn = zeros(size(trn,2)+1, size(trn,2), 'single'); ktrn(1,:) = 1:size(trn,2);
         ktst = zeros(size(trn,2)+1, size(tst,2), 'single'); ktst(1,:) = 1:size(tst,2);
